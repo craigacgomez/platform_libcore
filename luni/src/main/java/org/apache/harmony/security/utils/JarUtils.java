@@ -265,8 +265,8 @@ public class JarUtils {
         return (X509Certificate[])chain.toArray(new X509Certificate[count]);
     }
 
-    private static X509Certificate findCert(Principal issuer, X509Certificate[] candidates
-            boolean chainCheck) {
+    private static X509Certificate findCert(Principal issuer, X509Certificate[] candidates,
+            X509Certificate subjectCert, boolean chainCheck) {
         for (int i = 0; i < candidates.length; i++) {
             if (issuer.equals(candidates[i].getSubjectDN())) {
                 if (chainCheck) {

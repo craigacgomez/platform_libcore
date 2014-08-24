@@ -79,7 +79,7 @@ class JarVerifier {
     int mainAttributesEnd;
 
     /** Whether or not to check certificate chain signatures. */
-    private final boolean chainCheck
+    private final boolean chainCheck;
 
     /**
      * Stores and a hash and a message digest and verifies that massage digest
